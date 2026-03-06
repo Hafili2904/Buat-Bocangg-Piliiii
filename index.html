@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Buat Bocangg Piliiii😋😋😋</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+
+background:linear-gradient(
+180deg,
+#ff8fb1 0%,
+#ffc2d1 35%,
+#ffe5ec 70%,
+#ffd6e0 100%
+);
+
+background-attachment:fixed;
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding:40px 10px;
+position:relative;
+overflow-x:hidden;
+}
+
+/* FOTO */
+
+.frame{
+position:fixed;
+width:90px;
+height:90px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 18px rgba(0,0,0,0.25);
+z-index:5;
+}
+
+.frame img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* kiri */
+
+.f1{top:80px; left:5px;}
+.f2{top:250px; left:5px;}
+.f3{bottom:120px; left:5px;}
+
+
+/* kanan */
+
+.f4{top:120px; right:5px;}
+.f5{top:300px; right:5px;}
+.f6{bottom:150px; right:5px;}
+
+/* DASHBOARD */
+
+.dashboard{
+width:85%;
+max-width:700px;
+background:white;
+border-radius:25px;
+padding:35px;
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+z-index:2;
+position:relative;
+}
+
+/* title */
+
+.title{
+font-family:'Great Vibes',cursive;
+font-size:44px;
+text-align:center;
+color:#ff4d6d;
+margin-bottom:10px;
+}
+
+.heart{
+text-align:center;
+font-size:28px;
+margin-bottom:15px;
+}
+
+.subtitle{
+text-align:center;
+color:#555;
+margin-bottom:30px;
+}
+
+/* BOX */
+
+.love-box{
+background:linear-gradient(135deg,#ff758f,#ff8fab);
+color:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:20px;
+line-height:1.7;
+font-size:17px;
+}
+
+/* HP */
+
+@media(max-width:768px){
+
+.dashboard{
+width:80%;
+padding:25px;
+}
+
+.frame{
+width:70px;
+height:70px;
+}
+
+.title{
+font-size:34px;
+}
+
+}
+/* GATE */
+
+.gate{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:linear-gradient(160deg,#ff8fb1,#ffc2d1,#ffe5ec);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+z-index:9999;
+padding:30px;
+}
+
+.gate h1{
+font-family:'Great Vibes',cursive;
+font-size:50px;
+color:#ff4d6d;
+margin-bottom:20px;
+}
+
+.gate p{
+font-size:18px;
+color:#555;
+margin-bottom:30px;
+}
+
+.gate button{
+background:#ff4d6d;
+color:white;
+border:none;
+padding:15px 30px;
+font-size:16px;
+border-radius:30px;
+cursor:pointer;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* LOADING SCREEN */
+
+.loading-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+background:linear-gradient(160deg,#ff8fb1,#ffc2d1,#ffe5ec);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9998;
+}
+
+.loading-box{
+text-align:center;
+}
+
+.pp{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+margin-bottom:20px;
+}
+
+.loading-box h2{
+font-size:18px;
+margin-bottom:20px;
+color:#444;
+}
+
+
+/* LOADING BAR */
+
+.loading-bar{
+width:220px;
+height:10px;
+background:#ffd6e0;
+border-radius:10px;
+overflow:hidden;
+margin:auto;
+}
+
+.loading-progress{
+width:0%;
+height:100%;
+background:#ff4d6d;
+animation:loading 3s forwards;
+}
+
+@keyframes loading{
+
+0%{
+width:0%;
+}
+
+100%{
+width:100%;
+}
+
+}
+
+.fade-in{
+
+animation:fadeMasuk 1s ease forwards;
+
+}
+
+@keyframes fadeMasuk{
+
+0%{
+opacity:0;
+transform:translateY(20px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.frame img{
+cursor:pointer;
+transition:0.3s;
+}
+
+.frame img:hover{
+transform:scale(1.1);
+}
+
+.frame{
+animation:goyang 6s ease-in-out infinite alternate;
+}
+
+@keyframes goyang{
+0%{transform:rotate(-2deg);}
+100%{transform:rotate(2deg);}
+}
+</style>
+</head>
+<!-- GATE -->
+<div class="gate" id="gate">
+
+<h1>Hawo BOcil Kesayangan </h1>
+
+<p>
+Katanya kamu kangen ya...  
+coba liat ini deh, tapi sebelum adickikk ini liat, coba klik dulu ini.
+</p>
+
+<button onclick="startLoading()">Klik kalau si pendek ini kangen</button>
+
+</div>
+
+
+<!-- LOADING SCREEN -->
+<div class="loading-screen" id="loading">
+
+<div class="loading-box">
+
+<img src="pp.png" class="pp">
+
+<h2>Sabar yaa... lagi nyiapin sesuatu buat kamu</h2>
+
+<div class="loading-bar">
+<div class="loading-progress"></div>
+</div>
+
+</div>
+
+</div>
+<body>
+
+<div class="frame f1"><img src="photo1.png"></div>
+<div class="frame f2"><img src="photo2.png"></div>
+<div class="frame f3"><img src="photo3.png"></div>
+
+<div class="frame f4"><img src="photo4.png"></div>
+<div class="frame f5"><img src="photo5.png"></div>
+<div class="frame f6"><img src="photo6.png"></div>
+
+
+<div class="dashboard">
+
+<div class="title">Hawooooooo Adikicikkkkkk</div>
+<div class="heart">💙</div>
+
+<div class="subtitle">
+Tempat khusus buat seseorang yang katanya kangen... tapi suka nyebelin juga 🤭
+</div>
+<button onclick="rahasia()">Pesan Rahasia 🤫</button>
+<div class="love-box">
+Halo adikicikkk. Katanya kamu kangen ya? Lucu juga sih.  
+Padahal biasanya yang paling sering ngambek, paling sering gampang bete, tapi gakk nyangka juga bisa kangen hahahaa
+</div>
+
+<div class="love-box">
+Tapi anehnya justru itu yang bikin aku sayang banget sama kamu, ceilahhh hahahaa.  
+Kamu tuh paket lengkap tau gak sih: bisa ngeselin, bisa manja, bisa banget buat bikin kerandoman, tapi gak nyangka ternyata juga bisa bikin kangen terus hahaha.
+</div>
+
+<div class="love-box">
+Kalau kamu lagi kangen atau lagi bete sama aku, buka aja web ini hehehe.  
+Biar kamu inget kalau ada seseorang yang tetap milih kamu setiap hari.
+</div>
+
+<button onclick="peluk()">Peluk Virtual 🤗</button>
+</div>
+
+<script>
+
+function startLoading(){
+
+document.getElementById("gate").style.display="none";
+
+let loading = document.getElementById("loading");
+loading.style.display="flex";
+
+setTimeout(function(){
+
+loading.style.display="none";
+
+document.querySelector(".dashboard").classList.add("fade-in");
+
+},3000);
+setTimeout(function(){
+
+alert("Yeayyy Si Cantik dah bisa masukk 🌷");
+
+},3500);
+}
+
+function peluk(){
+alert("Peluk jauh dari Piliii buat Adikicik 🤗");
+}
+
+function rahasia(){
+alert("Sebenernya ini tuh bukan pesan rahasia. Aku cuma mau bilang kangen kamu hehehehe.");
+}
+</script>
+</body>
+</html>
